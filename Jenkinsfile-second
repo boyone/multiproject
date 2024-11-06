@@ -3,21 +3,18 @@ pipeline {
        // hello2
        
        stages {
-           when {
-                    changeset "second/*.*"
-           } 
            stage('Hello 2') {
-            //    when {
-            //         changeset "second/*.*"
-            //    }
+               when {
+                    changeset "second/*.*"
+               }
                steps {
                    sh 'cat second/README.md'
                }
            }
            stage('Hello 22') {
-            //    when {
-            //         changeset "second/*.*"
-            //    }
+               when {
+                    changeset "second/*.*"
+               }
                steps {
                    sh 'cat second/README.md'
                }
