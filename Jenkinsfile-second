@@ -3,6 +3,9 @@ pipeline {
        // hello2 
        stages {
            stage('Hello 2') {
+               when {
+                    changeset "second/*.*"
+               }
                steps {
                    sh 'cat second/README.md'
                }
