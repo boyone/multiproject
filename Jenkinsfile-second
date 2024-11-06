@@ -1,11 +1,14 @@
 pipeline {
        agent any
-       // hello2 
+       // hello2
+       when {
+                    changeset "second/*.*"
+        } 
        stages {
            stage('Hello 2') {
-               when {
-                    changeset "second/*.*"
-               }
+            //    when {
+            //         changeset "second/*.*"
+            //    }
                steps {
                    sh 'cat second/README.md'
                }
